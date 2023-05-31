@@ -54,8 +54,8 @@ function showRounds() {
                                     </div>
                                 </div>
                             </li>`;
-    addBox.insertAdjacentHTML("afterend", liTag);
-    });}
+    addBox.insertAdjacentHTML("afterend", liTag);});
+}
 
 showRounds();
 
@@ -82,7 +82,6 @@ function updateround(roundId, title, score, feeling, filterDesc) {
     isUpdate = true;
     addBox.click();
     titleTag.value = title;
-    //scoreTag = popupBox.querySelector('input[name="userScore"]'),
     scoreTag.value = score;
     feelingTag.value = feeling;
     descTag.value = description;
