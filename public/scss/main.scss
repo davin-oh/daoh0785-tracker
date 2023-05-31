@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+h1 {
+    color: #97B871;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+.golfImage{
+    display:flex;
+    position:fixed;
+    overflow: hidden;
+    width:100%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+body{
+    background: #E1F4FE;
+}
+
+header>h1 {
+    text-align: center;
+    padding-top: 18%;
+    padding-bottom: 15px;
+    /*margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 10px;*/
+    font-size: clamp(70px,4vw,100px);
+    font-weight: bold;
+    color: #97B871;
+}
+
+header>h2{
+    text-align: center;
+    font-size: clamp(10px,4vw,30px);
+    font-weight: bold;
+    color: #97B871;
+    padding-bottom: 0px;
+  }
+
+  .scroll-icon {
+    position: sticky;
+    display: block;
+    margin-left: auto;
+      margin-right: auto;
+      width: 2em;
+      height: 4em;
+      border: .3em solid #97B871;
+      border-radius: 2em;
+    margin-top: 15%;
+    margin-bottom: 20%;
+  }
+  .scroll-icon.ex-1 .wheel {
+      position: absolute;
+      left: 49%;
+      top: auto;
+      width: .6em;
+      height: .6em;
+      background-color: #97B871;
+      transform: translate(-50%, 0);
+      border-radius: .6em;
+      animation: ex-1-wheel 2s ease-in-out infinite;
+  
+  }
+  @keyframes ex-1-wheel {
+      0% {
+          transform: translate(-50%, 0);
+          opacity: 0;
+      }
+      20%, 70% {
+          opacity: 1;
+      }
+      90%, 100% {
+          transform: translate(-50%, 150%);
+          opacity: 0;
+      }
+  }
+
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid grey;
+    padding: 2em 1em;
+}
+
+.tagify {
+    padding: 0.5em;
+    flex-grow: 1;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5em;
+}
+
+.form-row .tagify__tag{
+    --tag-bg: #0052BF;
+    --tag-hover: #CE0078;
+    --tag-text-color: #FFF;
+    --tags-border-color: silver;
+    --tag-border-radius: 25px;
+    --tag-text-color--edit: #111;
+    --tag-remove-bg: var(--tag-hover);
+    --tag-inset-shadow-size: 1.35em;
+    --tag-remove-btn-bg--hover: black;
+}
+
+.form-row>label {
+    width: 100px;
+}
+
+.form-row>input,
+.form-row>select {
+    padding: 0.5em;
+    flex-grow: 1;
+}
