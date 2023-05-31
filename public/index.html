@@ -1,102 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Task Tracker</title>
-        <link rel="stylesheet" href="scss/main.scss">
-    </head>
-    <body>
-        <div class="golfImage">
-            <img src="./images/thumbnails/grass.png" alt="image of a golf ball on the green">
-          </div>
-        <header>
-            <h1>MYROUND</h1>
-            <h2>YOUR EVERYDAY GOLF DIARY</h2>
-            <div class="scroll-icon ex-1">
-                <span class="wheel"></span>
-              </div>
-        </header>
-        <form id="taskform">
-            <div class="form-row">
-                <label for="taskName">Name</label>
-                <input
-                    type="text"
-                    name="taskName"
-                    id="taskName"
-                    required="true"
-                >
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>MYROUND</title>
+    <link rel="stylesheet" href="scss/main.scss">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  </head>
+  <body>
+    <div class="golfImage">
+      <img src="./images/thumbnails/grass.png" alt="image of a golf ball on the green">
+    </div>
+    <h1>MYROUND</h1>
+    <h2>YOUR EVERY DAY GOLF DIARY</h2>
+    <div class="scroll-icon ex-1">
+      <span class="wheel"></span>
+    </div>
+    <!--<a href="#diary">Begin</a>-->
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p></p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form action="#">
+            <div class="row title">
+              <label>Golf Course *</label>
+              <input type="text" spellcheck="false">
             </div>
-            <div class="form-row">
-                <label for="taskType">Type</label>
-                <select id="taskType" name="taskType" required="true">
-                    <option value="">Select one</option>
-                    <option value="Concept Ideation">Concept Ideation</option>
-                    <option value="Wireframing">Wireframing</option>
-                    <option value="Application Coding">Application Coding</option>
-                </select>
+            <div class="row score">
+              <label>Score *</label>
+              <input type="number" name="userScore">
             </div>
-            <div class="form-row">
-                <label for="taskRate">Rate</label>
-                <input
-                    type="number"
-                    name="taskRate"
-                    id="taskRate"
-                    required="true"
-                >
+            <div class="row description">
+              <label>Note</label>
+              <textarea spellcheck="false"></textarea>
             </div>
-            <div class="form-row">
-                <label for="taskTime">Time</label>
-                <input
-                    type="number"
-                    name="taskTime"
-                    id="taskTime"
-                    required="true"
-                >
-            </div>
-            <div class="form-row">
-                <label for="taskClient">Client</label>
-                <input
-                    type="text"
-                    name="taskClient"
-                    id="taskClient"
-                    required="true"
-                >
-            </div>
-            <!-- This is a row in our form for inputing tags. -->
-            <div class="form-row">
-                <label for="tags">Tags</label>
-                <input
-                    type="text"
-                    name="tags"
-                    id="tags"
-                    required="true"
-                >
-            </div>
-            <!-- This is a row in our form for inputing data with autocomplete. It is actualy a datalist and the autocomplete comes
-            from a pre-defined list, the list is filled with options in the script file -->
-            <div class="form-row">
-                <label for="auto-complete">Auto complete</label>
-                <input
-                    type="text"
-                    name="taskAutocomplete"
-                    id="auto-complete"
-                    required="true"
-                    list="datalist-options"
-                >
-                <datalist id="datalist-options"></datalist>
-            </div>
-            <div class="form-row">
-                <input type="submit">
-            </div>
-        </form>
-        <h2>Tasks</h2>
-        <ul id="tasklist"></ul>
-        <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
-        <!-- To be able to import images and use parcel we need to set our script.js as a module -->
-        <script type="module" src="script.js"></script>
-    </body>
+            <button></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id = "diary" class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="uil uil-plus"></i></div>
+        <p>New Round</p>
+      </li>
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
 </html>
