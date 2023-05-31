@@ -4,6 +4,7 @@ popupTitle = popupBox.querySelector("header p"),
 closeIcon = popupBox.querySelector("header i"),
 titleTag = popupBox.querySelector("input"),
 scoreTag = popupBox.querySelector('input[name="userScore"]'),
+feelingTag = popupBox.querySelector('select[name="feeling"]'),
 descTag = popupBox.querySelector("textarea"),
 addBtn = popupBox.querySelector("button");
 const months = ["January", "February", "March", "April", "May", "June", "July",
@@ -18,11 +19,12 @@ addBox.addEventListener("click", () => {
     document.querySelector("body").style.overflow = "hidden";
     if(window.innerWidth > 660) titleTag.focus();
     if(window.innerWidth > 660) scoreTag.focus();
+    if(window.innerWidth > 660) feelingTag.focus();
 });
 
 closeIcon.addEventListener("click", () => {
     isUpdate = false;
-    titleTag.value = descTag.value = scoreTag.value = "";
+    titleTag.value = descTag.value = scoreTag.value = feelingTag.value = "";
     popupBox.classList.remove("show");
     document.querySelector("body").style.overflow = "auto";
 });
@@ -35,9 +37,9 @@ function showRounds() {
         let filterDesc = round.description.replaceAll("\n", '<br/>');
         let liTag = `<li class="round">
                                 <div class="details">
-                                    <p onclick="updateround(${id}, '${round.title}', '${round.score}', '${filterDesc}')">${round.title}</p>
-                                    <p1 onclick="updateround(${id}, '${round.title}', '${round.score}', '${filterDesc}')">${round.score}</p1>
-                                    <span onclick="updateround(${id}, '${round.title}', '${round.score}', '${filterDesc}')">
+                                    <p onclick="updateround(${id}, '${round.title}', '${round.score}', '${round.feeling}', '${filterDesc}')">${round.title}</p>
+                                    <p1 onclick="updateround(${id}, '${round.title}', '${round.score}', '${round.feeling}', '${filterDesc}')">${round.score}</p1>
+                                    <span onclick="updateround(${id}, '${round.title}', '${round.score}', '${round.feeling}', '${filterDesc}')">
                                     ${filterDesc.substring(0, max_body_length)}
                                     ${filterDesc.length > max_body_length ? "..." : ""}
                                     </span>
@@ -74,7 +76,7 @@ function deleteround(roundId) {
     showRounds();
 }
 
-function updateround(roundId, title, score, filterDesc) {
+function updateround(roundId, title, score, feeling, filterDesc) {
     let description = filterDesc.replaceAll('<br/>', '\r\n');
     updateId = roundId;
     isUpdate = true;
@@ -82,6 +84,7 @@ function updateround(roundId, title, score, filterDesc) {
     titleTag.value = title;
     //scoreTag = popupBox.querySelector('input[name="userScore"]'),
     scoreTag.value = score;
+    feelingTag.value = feeling;
     descTag.value = description;
     popupTitle.innerText = "Update a Round";
     addBtn.innerText = "Update Round";
@@ -91,6 +94,7 @@ addBtn.addEventListener("click", e => {
     e.preventDefault();
     let title = titleTag.value.trim(),
     score = scoreTag.value.trim(),
+    feeling = feelingTag.value.trim();
     description = descTag.value.trim();
 
     if(title || description) {
@@ -99,7 +103,7 @@ addBtn.addEventListener("click", e => {
         day = currentDate.getDate(),
         year = currentDate.getFullYear();
 
-        let roundInfo = {title, score, description, date: `${month} ${day}, ${year}`}
+        let roundInfo = {title, score, feeling, description, date: `${month} ${day}, ${year}`}
         if(!isUpdate) {
             rounds.push(roundInfo);
         } else {

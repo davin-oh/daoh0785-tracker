@@ -296,8 +296,8 @@ form .row label{
   display: block;
   margin-bottom: 6px;
 }
-form :where(input, textarea){
-  height: 50px;
+form :where(input, textarea, select){
+  height: 40px;
   width: 100%;
   outline: none;
   font-size: 17px;
