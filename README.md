@@ -48,7 +48,7 @@ Through these valuable experience, I decided that from now on, I will try to do 
 ### Coding process
 The coding process can be divided into mainly 4 stages: Intial stage, editing codes, back-end server setup, and commentation/documentation. 
 
-One thing to note is that stage 1 and 2 (initial stage and editing codes)'s commits and history can be seen in **another repository**: **https://github.com/davin-oh/davin-oh.github.io**
+***One thing to note is that stage 1 and 2 (initial stage and editing codes)'s commits and history can be seen in another repository: https://github.com/davin-oh/davin-oh.github.io**
 
 #### 1. Initial Stage
 For the initial stage of the coding process, I had to figure out how to structure the whole code. So I took a look at many tutorials and examples on Youtube that is related to tracking. Although there were many tutorials that was helpful and provided me a guideline, the following videos helped me the most in initially guiding the overall code:
