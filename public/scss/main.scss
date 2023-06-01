@@ -10,6 +10,8 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+// background is set as a golf-related image to set a consistant golf-vibrance
+// z-index is set as -1 so that other contents is on top of the background
 .golfImage {
   display: flex;
   position: fixed;
@@ -22,6 +24,7 @@ html {
   background-position: 50% 50%;
   background-size: cover;
 }
+// background colour is set as skyblue, to make the background png image appear with a blue sky.
 body {
   background: #e1f4fe;
 }
@@ -29,6 +32,66 @@ body {
   color: #fff;
   background: #a6bb8d;
 }
+
+// Logo of MYROUND that appears in the middle of the landing page
+h1 {
+  text-align: center;
+  padding-top: 18%;
+  padding-bottom: 15px;
+  font-size: clamp(70px, 4vw, 100px);
+  font-weight: bold;
+  color: #97b871;
+}
+// Short catch phrase for introducing MYROUND
+h2 {
+  text-align: center;
+  font-size: clamp(10px, 4vw, 30px);
+  font-weight: bold;
+  color: #97b871;
+  padding-bottom: 0px;
+}
+// Scroll icon that looks like a computer mouse
+.scroll-icon {
+  position: sticky;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2em;
+  height: 4em;
+  border: 0.3em solid #97b871;
+  border-radius: 2em;
+  margin-top: 15%;
+  margin-bottom: 20%;
+}
+// wheel part of the scroll icon
+.scroll-icon.ex-1 .wheel {
+  position: absolute;
+  left: 49%;
+  top: auto;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #97b871;
+  transform: translate(-50%, 0);
+  border-radius: 0.6em;
+  animation: ex-1-wheel 2s ease-in-out infinite;
+}
+// the wheel icon animation, so that it is more interactive and fun for the users. 
+// encourages users to scroll down
+@keyframes ex-1-wheel {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  20%, 70% {
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: translate(-50%, 150%);
+    opacity: 0;
+  }
+}
+// summary box of round diaries
+// all summary boxes of round diaries would look the same, be displayed in a grid-style to make the web app more simple and clean
 .wrapper {
   margin-left: 100px;
   margin-right: 100px;
@@ -46,82 +109,18 @@ body {
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-h1 {
-  text-align: center;
-  padding-top: 18%;
-  padding-bottom: 15px;
-  /*margin-left: 100px;
-  margin-top: 40px;
-  margin-bottom: 10px;*/
-  font-size: clamp(70px, 4vw, 100px);
-  font-weight: bold;
-  color: #97b871;
-}
-h2 {
-  text-align: center;
-  font-size: clamp(10px, 4vw, 30px);
-  font-weight: bold;
-  color: #97b871;
-  padding-bottom: 0px;
-}
-.scroll-icon {
-  position: sticky;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 2em;
-  height: 4em;
-  border: 0.3em solid #97b871;
-  border-radius: 2em;
-  margin-top: 15%;
-  margin-bottom: 20%;
-}
-.scroll-icon.ex-1 .wheel {
-  position: absolute;
-  left: 49%;
-  top: auto;
-  width: 0.6em;
-  height: 0.6em;
-  background-color: #97b871;
-  transform: translate(-50%, 0);
-  border-radius: 0.6em;
-  animation: ex-1-wheel 2s ease-in-out infinite;
-}
-@keyframes ex-1-wheel {
-  0% {
-    transform: translate(-50%, 0);
-    opacity: 0;
-  }
-  20%,
-  70% {
-    opacity: 1;
-  }
-  90%,
-  100% {
-    transform: translate(-50%, 150%);
-    opacity: 0;
-  }
-}
-/*a{
-  align-items: center;
-  font-size: clamp(10px,4vw,30px);
-  font-weight: bold;
-}*/
-.add-box,
-.icon,
-.bottom-content,
-.popup,
-header,
-.settings .menu li {
+.add-box, .icon, .bottom-content, .popup, header, .settings .menu li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+// create new round box and make the cursor pointer to guide users to click it
 .add-box {
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
 }
+// create new round icon 
 .add-box .icon {
   height: 100px;
   width: 100px;
@@ -131,6 +130,7 @@ header,
   justify-content: center;
   border: 2px dashed #b5cda3;
 }
+// new round text 'New Round' to indicate the purpose of the new round box
 .add-box p {
   color: #a6bb8d;
   font-weight: 500;
@@ -145,24 +145,22 @@ header,
   max-height: 185px;
   overflow-y: auto;
 }
-/*.round .details::-webkit-scrollbar,*/
+// scrollbar for the 'note' area from the form, so that users can see full note even if it is longer than the textfield
 .popup textarea::-webkit-scrollbar {
   width: 0;
 }
-/*.round .details::-webkit-scrollbar,*/
 .popup textarea:hover::-webkit-scrollbar {
   width: 5px;
 }
-/*.round .details:hover::-webkit-scrollbar-track,*/
 .popup textarea:hover::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 25px;
 }
-/*.round .details:hover::-webkit-scrollbar-thumb,*/
 .popup textarea:hover::-webkit-scrollbar-thumb {
   background: #a6bb8d;
   border-radius: 25px;
 }
+// golf course
 .round p {
   cursor: pointer;
   padding-bottom: 0px;
@@ -170,12 +168,14 @@ header,
   font-weight: bold;
   color: #808080;
 }
+// score
 .round p1 {
   cursor: pointer;
   font-size: 60px;
   font-weight: bold;
   color: #97b871;
 }
+// note
 .round span {
   cursor: pointer;
   padding-top: 0px;
@@ -186,15 +186,18 @@ header,
   margin-top: 5px;
   padding-bottom: 0px;
 }
+// bottom content (date and setting icon for delete)
 .round .bottom-content {
   padding-top: 6px;
   border-top: 1px solid #a6bb8d;
 }
+// date 
 .bottom-content span {
   position: relative;
   color: #6d6d6d;
   font-size: 14px;
 }
+// setting icon for delete
 .bottom-content .settings {
   position: relative;
 }
@@ -219,6 +222,7 @@ header,
 .settings.show .menu {
   transform: scale(1);
 }
+// delete
 .settings .menu li {
   height: 25px;
   font-size: 16px;
@@ -238,7 +242,7 @@ header,
 .menu li i {
   padding-right: 8px;
 }
-
+// popup form
 .popup-box {
   position: fixed;
   top: 0;
@@ -319,6 +323,7 @@ form .row textarea {
   resize: none;
   padding: 8px 10px;
 }
+// submit/update button
 form button {
   width: 100%;
   height: 50px;
@@ -330,7 +335,7 @@ form button {
   border-radius: 4px;
   background: #a6bb8d;
 }
-
+// for a responsive web application, media queries were used
 @media (max-width: 660px) {
   h1 h2 .wrapper {
     margin: 50px;
