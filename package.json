@@ -1,14 +1,14 @@
 {
-  "name": "deco2017-task-tracker",
+  "name": "daoh0785-tracker",
   "version": "1.0.0",
-  "description": "Task tracking web application",
+  "description": "Golf round tracking diary web application",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "prestart": "parcel build ./public/index.html",
     "dev": "parcel serve ./public/index.html"
   },
-  "author": "Rob Dongas",
+  "author": "Davin Oh",
   "devDependencies": {
     "@parcel/resolver-glob": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
