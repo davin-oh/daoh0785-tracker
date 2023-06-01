@@ -1,98 +1,40 @@
 /* Import Google Font - Montserrat - Sans Serif Style */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-html {
+html{
   scroll-behavior: smooth;
 }
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 // background is set as a golf-related image to set a consistant golf-vibrance
 // z-index is set as -1 so that other contents is on top of the background
-.golfImage {
-  display: flex;
-  position: fixed;
+.golfImage{
+  display:flex;
+  position:fixed;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+  width:100%;
+  height:100%;
+  justify-content:center;
+  align-items:center;
   z-index: -1;
   background-position: 50% 50%;
   background-size: cover;
 }
 // background colour is set as skyblue, to make the background png image appear with a blue sky.
-body {
-  background: #e1f4fe;
+body{
+  background:#E1F4FE;
 }
-::selection {
+::selection{
   color: #fff;
-  background: #a6bb8d;
-}
-
-// Logo of MYROUND that appears in the middle of the landing page
-h1 {
-  text-align: center;
-  padding-top: 18%;
-  padding-bottom: 15px;
-  font-size: clamp(70px, 4vw, 100px);
-  font-weight: bold;
-  color: #97b871;
-}
-// Short catch phrase for introducing MYROUND
-h2 {
-  text-align: center;
-  font-size: clamp(10px, 4vw, 30px);
-  font-weight: bold;
-  color: #97b871;
-  padding-bottom: 0px;
-}
-// Scroll icon that looks like a computer mouse
-.scroll-icon {
-  position: sticky;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 2em;
-  height: 4em;
-  border: 0.3em solid #97b871;
-  border-radius: 2em;
-  margin-top: 15%;
-  margin-bottom: 20%;
-}
-// wheel part of the scroll icon
-.scroll-icon.ex-1 .wheel {
-  position: absolute;
-  left: 49%;
-  top: auto;
-  width: 0.6em;
-  height: 0.6em;
-  background-color: #97b871;
-  transform: translate(-50%, 0);
-  border-radius: 0.6em;
-  animation: ex-1-wheel 2s ease-in-out infinite;
-}
-// the wheel icon animation, so that it is more interactive and fun for the users. 
-// encourages users to scroll down
-@keyframes ex-1-wheel {
-  0% {
-    transform: translate(-50%, 0);
-    opacity: 0;
-  }
-  20%, 70% {
-    opacity: 1;
-  }
-  90%, 100% {
-    transform: translate(-50%, 150%);
-    opacity: 0;
-  }
+  background: #A6BB8D;
 }
 // summary box of round diaries
 // all summary boxes of round diaries would look the same, be displayed in a grid-style to make the web app more simple and clean
-.wrapper {
+.wrapper{
   margin-left: 100px;
   margin-right: 100px;
   display: grid;
@@ -100,68 +42,130 @@ h2 {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding-bottom: 30%;
 }
-.wrapper li {
+.wrapper li{
   height: 220px;
   list-style: none;
   border-radius: 20px;
   margin-right: 0%;
   padding: 20px;
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.add-box, .icon, .bottom-content, .popup, header, .settings .menu li {
+// Logo of MYROUND that appears in the middle of the landing page
+h1{
+  text-align: center;
+  padding-top: 18%;
+  padding-bottom: 15px;
+  /*margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 10px;*/
+  font-size: clamp(70px,4vw,100px);
+  font-weight: bold;
+  color: #97B871;
+}
+// Short catch phrase for introducing MYROUND
+h2{
+  text-align: center;
+  font-size: clamp(10px,4vw,30px);
+  font-weight: bold;
+  color: #97B871;
+  padding-bottom: 0px;
+}
+// Scroll icon that looks like a computer mouse
+.scroll-icon {
+  position: sticky;
+  display: block;
+  margin-left: auto;
+	margin-right: auto;
+	width: 2em;
+	height: 4em;
+	border: .3em solid #97B871;
+	border-radius: 2em;
+  margin-top: 15%;
+  margin-bottom: 20%;
+}
+// wheel part of the scroll icon
+.scroll-icon.ex-1 .wheel {
+	position: absolute;
+	left: 49%;
+	top: auto;
+	width: .6em;
+	height: .6em;
+	background-color: #97B871;
+	transform: translate(-50%, 0);
+	border-radius: .6em;
+	animation: ex-1-wheel 2s ease-in-out infinite;
+}
+// the wheel icon animation, so that it is more interactive and fun for the users. 
+// encourages users to scroll down
+@keyframes ex-1-wheel {
+	0% {
+		transform: translate(-50%, 0);
+		opacity: 0;
+	}
+	20%, 70% {
+		opacity: 1;
+	}
+	90%, 100% {
+		transform: translate(-50%, 150%);
+		opacity: 0;
+	}
+}
+
+.add-box, .icon, .bottom-content, 
+.popup, header, .settings .menu li{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 // create new round box and make the cursor pointer to guide users to click it
-.add-box {
+.add-box{
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
 }
 // create new round icon 
-.add-box .icon {
+.add-box .icon{
   height: 100px;
   width: 100px;
-  color: #a6bb8d;
+  color: #A6BB8D;
   font-size: 40px;
   border-radius: 50%;
   justify-content: center;
-  border: 2px dashed #b5cda3;
+  border: 2px dashed #B5CDA3;
 }
 // new round text 'New Round' to indicate the purpose of the new round box
-.add-box p {
-  color: #a6bb8d;
+.add-box p{
+  color: #A6BB8D;
   font-weight: 500;
   margin-top: 20px;
 }
-.round {
+.round{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.round .details {
+.round .details{
   max-height: 185px;
   overflow-y: auto;
 }
 // scrollbar for the 'note' area from the form, so that users can see full note even if it is longer than the textfield
-.popup textarea::-webkit-scrollbar {
+.popup textarea::-webkit-scrollbar{
   width: 0;
 }
-.popup textarea:hover::-webkit-scrollbar {
+.popup textarea:hover::-webkit-scrollbar{
   width: 5px;
 }
-.popup textarea:hover::-webkit-scrollbar-track {
+.popup textarea:hover::-webkit-scrollbar-track{
   background: #f1f1f1;
   border-radius: 25px;
 }
-.popup textarea:hover::-webkit-scrollbar-thumb {
-  background: #a6bb8d;
+.popup textarea:hover::-webkit-scrollbar-thumb{
+  background: #A6BB8D;
   border-radius: 25px;
 }
 // golf course
-.round p {
+.round p{
   cursor: pointer;
   padding-bottom: 0px;
   font-size: 18px;
@@ -169,14 +173,14 @@ h2 {
   color: #808080;
 }
 // score
-.round p1 {
+.round p1{
   cursor: pointer;
   font-size: 60px;
   font-weight: bold;
-  color: #97b871;
+  color:#97B871;
 }
 // note
-.round span {
+.round span{
   cursor: pointer;
   padding-top: 0px;
   display: block;
@@ -187,26 +191,26 @@ h2 {
   padding-bottom: 0px;
 }
 // bottom content (date and setting icon for delete)
-.round .bottom-content {
+.round .bottom-content{
   padding-top: 6px;
-  border-top: 1px solid #a6bb8d;
+  border-top: 1px solid #A6BB8D;
 }
 // date 
-.bottom-content span {
+.bottom-content span{
   position: relative;
-  color: #6d6d6d;
+  color: #6D6D6D;
   font-size: 14px;
 }
 // setting icon for delete
-.bottom-content .settings {
+.bottom-content .settings{
   position: relative;
 }
-.bottom-content .settings i {
-  color: #6d6d6d;
+.bottom-content .settings i{
+  color: #6D6D6D;
   cursor: pointer;
   font-size: 15px;
 }
-.settings .menu {
+.settings .menu{
   z-index: 1;
   bottom: 0;
   right: -5px;
@@ -216,14 +220,14 @@ h2 {
   border-radius: 4px;
   transform: scale(0);
   transform-origin: bottom right;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
 }
-.settings.show .menu {
+.settings.show .menu{
   transform: scale(1);
 }
 // delete
-.settings .menu li {
+.settings .menu li{
   height: 25px;
   font-size: 16px;
   margin-bottom: 2px;
@@ -233,26 +237,26 @@ h2 {
   border-radius: 0;
   justify-content: flex-start;
 }
-.menu li:last-child {
+.menu li:last-child{
   margin-bottom: 0;
 }
-.menu li:hover {
+.menu li:hover{
   background: #f5f5f5;
 }
-.menu li i {
+.menu li i{
   padding-right: 8px;
 }
 // popup form
-.popup-box {
+.popup-box{
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
 }
-.popup-box .popup {
+.popup-box .popup{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -262,51 +266,49 @@ h2 {
   justify-content: center;
   transform: translate(-50%, -50%) scale(0.95);
 }
-.popup-box,
-.popup {
+.popup-box, .popup{
   opacity: 0;
   pointer-events: none;
   transition: all 0.25s ease;
 }
-.popup-box.show,
-.popup-box.show .popup {
+.popup-box.show, .popup-box.show .popup{
   opacity: 1;
   pointer-events: auto;
 }
-.popup-box.show .popup {
+.popup-box.show .popup{
   transform: translate(-50%, -50%) scale(1);
 }
-.popup .content {
+.popup .content{
   border-radius: 10px;
   background: #fff;
   width: calc(100% - 15px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
-.content header {
+.content header{
   padding: 15px 25px;
   border-bottom: 1px solid #ccc;
 }
-.content header p {
+.content header p{
   font-size: 20px;
   font-weight: 500;
 }
-.content header i {
+.content header i{
   color: #8b8989;
   cursor: pointer;
   font-size: 23px;
 }
-.content form {
+.content form{
   margin: 15px 25px 35px;
 }
-.content form .row {
+.content form .row{
   margin-bottom: 20px;
 }
-form .row label {
+form .row label{
   font-size: 18px;
   display: block;
   margin-bottom: 6px;
 }
-form :where(input, textarea, select) {
+form :where(input, textarea, select){
   height: 40px;
   width: 100%;
   outline: none;
@@ -315,16 +317,16 @@ form :where(input, textarea, select) {
   border-radius: 4px;
   border: 1px solid #999;
 }
-form :where(input, textarea):focus {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+form :where(input, textarea):focus{
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-form .row textarea {
+form .row textarea{
   height: 150px;
   resize: none;
   padding: 8px 10px;
 }
 // submit/update button
-form button {
+form button{
   width: 100%;
   height: 50px;
   color: #fff;
@@ -333,22 +335,22 @@ form button {
   cursor: pointer;
   font-size: 17px;
   border-radius: 4px;
-  background: #a6bb8d;
+  background: #A6BB8D;
 }
 // for a responsive web application, media queries were used
-@media (max-width: 660px) {
-  h1 h2 .wrapper {
+@media (max-width: 660px){
+  h1 h2 .wrapper{
     margin: 50px;
     gap: 15px;
     grid-template-columns: repeat(auto-fill, 100%);
   }
-  .popup-box .popup {
+  .popup-box .popup{
     max-width: calc(100% - 15px);
   }
-  .bottom-content .settings i {
+  .bottom-content .settings i{
     font-size: 17px;
   }
-  .wrapper li {
+  .wrapper li{
     height: 230px;
   }
 }

@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">  
     <title>MYROUND</title>
-    <link rel="stylesheet" href="scss/main.scss" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.scss">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Iconscout Link For Icons -->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   </head>
   <body>
     <div class="golfImage">
-      <img
-        src="./images/thumbnails/grass.png"
-        alt="image of a green golf course"
-      />
+      <img src="./images/thumbnails/grass.png" alt="image of a golf ball on the green">
     </div>
     <!--Landing page that welcomes the user with a scroll icon that indicates users that they must scroll down.-->
     <h1>MYROUND</h1>
@@ -35,19 +29,20 @@
           <form action="#">
             <div class="row title">
               <label>Golf Course *</label>
-              <input type="text" spellcheck="false" required="true" />
+              <input type="text" spellcheck="false">
             </div>
             <div class="row score">
               <label>Score *</label>
-              <input type="number" name="userScore" required="true" />
+              <input type="number" name="userScore">
             </div>
             <div class="row feeling">
               <label>Feeling *</label>
-              <select name="feeling" required="true">
-                <option value="0">Very Happy</option>
-                <option value="1">Happy</option>
-                <option value="2">Okay</option>
-                <option value="3">Not well</option>
+              <select name="feeling">
+                <option value = "0">Select feeling</option>
+                <option value = "1">Very Happy</option>
+                <option value = "2">Happy</option>
+                <option value = "3">Okay</option>
+                <option value = "4">Not well</option>
               </select>
             </div>
             <div class="row description">
@@ -60,15 +55,12 @@
       </div>
     </div>
     <!--box that allows users to add new diary and input data-->
-    <div id="diary" class="wrapper">
+    <div id = "diary" class="wrapper">
       <li class="add-box">
         <div class="icon"><i class="uil uil-plus"></i></div>
         <p>New Round</p>
       </li>
     </div>
-
     <script src="script.js"></script>
-    <!-- To be able to import images and use parcel we need to set our script.js as a module -->
-    <!--<script type="module" src="script.js"></script>-->
   </body>
 </html>
