@@ -170,7 +170,7 @@ After I finilised editing all code to make the desired interface for MYROUND thr
 
 Until stage 2, I was using a live domain that I made through Github pages. After I realised my mistake that I have not yet set up a back-end server, I referred back to the scrimba that we did during tutorial, and forked the solutions from the todo list github page (https://github.com/robdongas/deco2017-task-tracker/blob/solutions/public/script.js)
 
-Because I forked it, I had to use a different repository from what I used in stage 1-2. I deleted all unnecessary codes and files for MYROUND and replaced the codes in .scss, index.html, and script.js file to the codes that I made in stage 1-2. I did this by copy and pasting the codes from my previous repository.
+Because I forked it, I had to use a different repository from what I used in stage 1-2 (https://github.com/davin-oh/davin-oh.github.io). I deleted all unnecessary codes and files for MYROUND and replaced the codes in .scss, index.html, and script.js file to the codes that I made in stage 1-2. I did this by copy and pasting the codes from my previous repository.
 
 Then, I installed node.js, edited the package.json properties to suit MYROUND, and installed express through running the `npm install express` command on console. 
 
